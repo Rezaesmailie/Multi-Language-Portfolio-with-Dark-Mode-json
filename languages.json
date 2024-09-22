@@ -1,0 +1,91 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const data = {
+        "en": {
+            "home": "Home",
+            "about": "About Me",
+            "contact": "Contact",
+            "blog": "Blog",
+            "product": "Product",
+            "team": "Team",
+            "gallery": "Gallery",
+            "home_title": "Reza Esmailg Gol",
+            "home_subtitle": "Full Stack Web Developer!",
+            "home_description": "Web Designer & Web Developer"
+        },
+        "fa": {
+            "home": "خانه",
+            "about": "درباره من",
+            "contact": "تماس",
+            "blog": "وبلاگ",
+            "product": "محصول",
+            "team": "تیم",
+            "gallery": "گالری",
+            "home_title": "رضا اسماعیل گل",
+            "home_subtitle": "توسعه‌دهنده فول استک وب",
+            "home_description": "طراح و توسعه‌دهنده وب"
+        }
+    };
+
+    const enBtn = document.getElementById('en-btn');
+    const faBtn = document.getElementById('fa-btn');
+    const modeToggle = document.getElementById('mode-toggle');
+    let currentLang = localStorage.getItem('language') || 'en';
+    let darkMode = localStorage.getItem('darkMode') === 'enabled';
+
+    function loadLanguage(lang) {
+        document.getElementById('home').textContent = data[lang].home;
+        document.getElementById('about').textContent = data[lang].about;
+        document.getElementById('contact').textContent = data[lang].contact;
+        document.getElementById('blog').textContent = data[lang].blog;
+        document.getElementById('product').textContent = data[lang].product;
+        document.getElementById('team').textContent = data[lang].team;
+        document.getElementById('gallery').textContent = data[lang].gallery;
+        document.getElementById('title').textContent = data[lang].home_title;
+        document.getElementById('subtitle').textContent = data[lang].home_subtitle;
+        document.getElementById('description').textContent = data[lang].home_description;
+    }
+
+    // Load saved language
+    loadLanguage(currentLang);
+
+    // Switch to English
+    enBtn.addEventListener('click', function () {
+        currentLang = 'en';
+        loadLanguage(currentLang);
+        localStorage.setItem('language', 'en');
+    });
+
+    // Switch to Farsi
+    faBtn.addEventListener('click', function () {
+        currentLang = 'fa';
+        loadLanguage(currentLang);
+        localStorage.setItem('language', 'fa');
+    });
+
+    // Enable dark mode
+    function enableDarkMode() {
+        document.body.classList.add('dark-mode');
+        localStorage.setItem('darkMode', 'enabled');
+    }
+
+    // Disable dark mode
+    function disableDarkMode() {
+        document.body.classList.remove('dark-mode');
+        localStorage.setItem('darkMode', null);
+    }
+
+    // Load dark mode setting
+    if (darkMode) {
+        enableDarkMode();
+    }
+
+    // Toggle dark mode
+    modeToggle.addEventListener('click', function () {
+        darkMode = localStorage.getItem('darkMode') === 'enabled';
+        if (darkMode) {
+            disableDarkMode();
+        } else {
+            enableDarkMode();
+        }
+    });
+});

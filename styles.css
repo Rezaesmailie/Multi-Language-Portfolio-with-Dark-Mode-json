@@ -1,0 +1,93 @@
+/* دکمه‌های پرچم برای تغییر زبان */
+.flag-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+/* حالت عادی (روز) */
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+/* متن‌های داخل سکشن در حالت روز */
+.content-section h1,
+.content-section h2,
+.content-section p {
+    color: #333; /* مشکی برای حالت روز */
+}
+
+/* حالت دارک مود */
+.dark-mode {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+/* متن‌های داخل سکشن در حالت شب */
+.dark-mode .content-section h1,
+.dark-mode .content-section h2,
+.dark-mode .content-section p {
+    color: white; /* سفید برای حالت شب */
+}
+
+/* استایل دکمه دارک مود با آیکون خورشید و ماه */
+#dark-mode-icon {
+    font-size: 1.5rem;
+}
+
+/* Floating image animation */
+.floating-image {
+    animation: floating 3s ease-in-out infinite;
+    max-width: 100%;
+    height: auto;
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Full-height sections */
+.content-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* حالت‌های مختلف منوبار در سایز موبایلی */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav-link {
+        padding: 10px;
+        font-size: 1.2rem;
+    }
+
+    .flag-button {
+        margin: 0 auto;
+    }
+
+    #mode-toggle {
+        margin: 0 auto;
+    }
+}
