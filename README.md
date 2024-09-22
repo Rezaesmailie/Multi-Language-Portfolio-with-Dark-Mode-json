@@ -35,3 +35,10 @@ Local Storage for saving preferences
 Screenshots:
 ![screen shot](./mainfa.jpg)
 ![screen shot](./menu.jpg)
+How to Use
+Clone the repository:
+bash
+Copy code
+git clone https://github.com/Rezaesmailie/Multi-Language-Portfolio-with-Dark-Mode-json/.git
+Open the project on your local server.
+Modify translations in the languages.json file as needed.
