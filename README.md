@@ -1,6 +1,7 @@
 Dynamic Multi-Language Portfolio with Dark Mode & Smooth Scrolling
 
-[![Typing SVG](https://readme-typing-svg.demolab.com/?lines= Multi+Language+Portfolio+Dark+Mode+Json)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com/?lines=Multi+Language+Portfolio+Dark+Mode+Json)](https://git.io/typing-svg)
+
 
 English Description
 About This Project
