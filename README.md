@@ -1,5 +1,7 @@
 Dynamic Multi-Language Portfolio with Dark Mode & Smooth Scrolling
+
 [![Typing SVG](https://readme-typing-svg.demolab.com/?lines= Multi+Language+Portfolio+Dark+Mode+Json)](https://git.io/typing-svg)
+
 English Description
 About This Project
 This project is a dynamic, multi-language portfolio website designed for developers, freelancers, or anyone wanting to showcase their work. It includes multi-language support (English and Persian), dark mode, smooth section transitions, and auto-saving of settings like the last viewed section and chosen language. Built with HTML, CSS, JavaScript, and JSON, the website offers a clean, modern user experience.
