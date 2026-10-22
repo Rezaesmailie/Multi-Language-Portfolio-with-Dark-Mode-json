@@ -1,0 +1,58 @@
+name: Portfolio quality checks
+
+on:
+  push:
+    branches:
+      - main
+      - feat/production-polish-browser-qa-2026
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    name: Static checks and translation integrity
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate JavaScript syntax
+        run: node --check script.js
+      - name: Run portfolio tests
+        run: node --test tests/site.test.mjs
+
+  browser:
+    name: Chromium desktop and mobile smoke tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser test dependency
+        run: npm install --no-audit --no-fund --package-lock=false
+      - name: Install Chromium for Playwright
+        run: npx playwright install --with-deps chromium
+      - name: Run interactive browser checks
+        run: npm run test:browser
+      - name: Upload actual screenshots and diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: portfolio-browser-qa
+          path: |
+            artifacts/screenshots/
+            test-results/
+          if-no-files-found: ignore
+          retention-days: 14

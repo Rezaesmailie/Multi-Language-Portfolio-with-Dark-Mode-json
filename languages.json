@@ -1,91 +1,257 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const data = {
-        "en": {
-            "home": "Home",
-            "about": "About Me",
-            "contact": "Contact",
-            "blog": "Blog",
-            "product": "Product",
-            "team": "Team",
-            "gallery": "Gallery",
-            "home_title": "Reza Esmailg Gol",
-            "home_subtitle": "Full Stack Web Developer!",
-            "home_description": "Web Designer & Web Developer"
-        },
-        "fa": {
-            "home": "خانه",
-            "about": "درباره من",
-            "contact": "تماس",
-            "blog": "وبلاگ",
-            "product": "محصول",
-            "team": "تیم",
-            "gallery": "گالری",
-            "home_title": "رضا اسماعیل گل",
-            "home_subtitle": "توسعه‌دهنده فول استک وب",
-            "home_description": "طراح و توسعه‌دهنده وب"
-        }
-    };
-
-    const enBtn = document.getElementById('en-btn');
-    const faBtn = document.getElementById('fa-btn');
-    const modeToggle = document.getElementById('mode-toggle');
-    let currentLang = localStorage.getItem('language') || 'en';
-    let darkMode = localStorage.getItem('darkMode') === 'enabled';
-
-    function loadLanguage(lang) {
-        document.getElementById('home').textContent = data[lang].home;
-        document.getElementById('about').textContent = data[lang].about;
-        document.getElementById('contact').textContent = data[lang].contact;
-        document.getElementById('blog').textContent = data[lang].blog;
-        document.getElementById('product').textContent = data[lang].product;
-        document.getElementById('team').textContent = data[lang].team;
-        document.getElementById('gallery').textContent = data[lang].gallery;
-        document.getElementById('title').textContent = data[lang].home_title;
-        document.getElementById('subtitle').textContent = data[lang].home_subtitle;
-        document.getElementById('description').textContent = data[lang].home_description;
-    }
-
-    // Load saved language
-    loadLanguage(currentLang);
-
-    // Switch to English
-    enBtn.addEventListener('click', function () {
-        currentLang = 'en';
-        loadLanguage(currentLang);
-        localStorage.setItem('language', 'en');
-    });
-
-    // Switch to Farsi
-    faBtn.addEventListener('click', function () {
-        currentLang = 'fa';
-        loadLanguage(currentLang);
-        localStorage.setItem('language', 'fa');
-    });
-
-    // Enable dark mode
-    function enableDarkMode() {
-        document.body.classList.add('dark-mode');
-        localStorage.setItem('darkMode', 'enabled');
-    }
-
-    // Disable dark mode
-    function disableDarkMode() {
-        document.body.classList.remove('dark-mode');
-        localStorage.setItem('darkMode', null);
-    }
-
-    // Load dark mode setting
-    if (darkMode) {
-        enableDarkMode();
-    }
-
-    // Toggle dark mode
-    modeToggle.addEventListener('click', function () {
-        darkMode = localStorage.getItem('darkMode') === 'enabled';
-        if (darkMode) {
-            disableDarkMode();
-        } else {
-            enableDarkMode();
-        }
-    });
-});
+{
+  "en": {
+    "skip": "Skip to content",
+    "navHome": "Home",
+    "navAbout": "About",
+    "navExpertise": "Expertise",
+    "navProjects": "Projects",
+    "navContact": "Contact",
+    "eyebrow": "DESIGN • DEVELOPMENT • AUTOMATION",
+    "greeting": "Hello, I'm",
+    "heroName": "Reza Esmail Gol",
+    "heroRole": "Full-Stack Developer.",
+    "heroDescription": "I turn complex ideas into clear, reliable digital products — with thoughtful interfaces, robust engineering and a focus on real-world impact.",
+    "exploreWork": "Explore my work",
+    "letsTalk": "Let's talk",
+    "findMe": "FIND ME ON",
+    "emailMe": "Email me ↗",
+    "codeFooter": "Ideas into working software",
+    "scrollCue": "SCROLL TO EXPLORE",
+    "aboutKicker": "INTRODUCTION",
+    "aboutHeading": "Technology with purpose. Design with intention.",
+    "aboutLead": "I build products where clean design meets solid engineering.",
+    "aboutText": "My work spans responsive websites, full-stack applications, process automation and AI-assisted experiences. I enjoy untangling difficult challenges and making digital tools feel simple for the people using them.",
+    "aboutHighlightOne": "User-first interfaces",
+    "aboutHighlightTwo": "Maintainable architecture",
+    "aboutHighlightThree": "Performance-minded delivery",
+    "statOne": "Web experiences",
+    "statTwo": "Product engineering",
+    "statThree": "Smart automation",
+    "expertiseKicker": "WHAT I DO",
+    "expertiseHeading": "Building across the entire stack.",
+    "expertiseIntro": "From the first wireframe to deployment, I connect the dots between design, technology and business needs.",
+    "skillOneTitle": "Frontend & UI/UX",
+    "skillOneText": "Accessible, responsive interfaces with intuitive flows, careful typography and polished details.",
+    "skillTwoTitle": "Backend & Platforms",
+    "skillTwoText": "Practical application logic, APIs, integrations and maintainable systems that scale with a product.",
+    "skillThreeTitle": "AI & Automation",
+    "skillThreeText": "Smarter workflows and AI-powered features that reduce friction and help people get more done.",
+    "projectsKicker": "SELECTED WORK",
+    "projectsHeading": "Work that speaks for itself.",
+    "projectsIntro": "A selection of public repositories and experiments. Explore the source code and follow the evolution of each project.",
+    "filterAll": "All projects",
+    "filterWeb": "Web & apps",
+    "filterAI": "AI & tools",
+    "projectChatTitle": "Chat Video Studio",
+    "projectChatText": "A browser-based creative project for turning chat-style conversations into video content.",
+    "projectGermanTitle": "Menschen A1.1 Companion",
+    "projectGermanText": "An interactive companion for practicing German vocabulary and beginner-level exercises.",
+    "projectSeoTitle": "SEO Mind",
+    "projectSeoText": "A public Python project exploring technical SEO and search optimization workflows.",
+    "projectVoiceTitle": "Lahne Man",
+    "projectVoiceText": "A Python-based public project in the area of voice and digital tooling.",
+    "projectWpTitle": "WP Booster",
+    "projectWpText": "An open-source WordPress performance project focused on improving web speed.",
+    "projectPortfolioTitle": "Multilingual Portfolio",
+    "projectPortfolioText": "This site: a lightweight portfolio with multilingual support, accessible navigation and responsive design.",
+    "viewSource": "View source",
+    "moreGithub": "Explore more on GitHub",
+    "contactKicker": "LET'S CONNECT",
+    "contactHeading": "Have a great idea? Let's build it.",
+    "contactText": "Whether you have a product in mind, a problem to solve or simply want to connect — I'd love to hear from you.",
+    "contactButton": "Start a conversation",
+    "preferEmail": "OR EMAIL ME DIRECTLY",
+    "footerLine": "Designed with care. Built for the web.",
+    "backTop": "Back to top",
+    "switchLight": "Switch to light theme",
+    "switchDark": "Switch to dark theme",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "navLabel": "Main navigation",
+    "languageLabel": "Website language",
+    "filterLabel": "Filter projects",
+    "filterResult": "{count} projects shown",
+    "metaTitle": "Reza Esmail Gol | Full-Stack Developer",
+    "metaDescription": "Reza Esmail Gol — Full-stack web developer building accessible, fast digital experiences, AI tools and useful software. Explore selected projects.",
+    "brandLabel": "Reza Esmail Gol — Home",
+    "codeVisualLabel": "Decorative illustration of a developer's code editor",
+    "projectChatLabel": "View Chat Video Studio source on GitHub",
+    "projectGermanLabel": "View Menschen A1.1 source on GitHub",
+    "projectSeoLabel": "View SEO Mind source on GitHub",
+    "projectVoiceLabel": "View Lahne Man source on GitHub",
+    "projectWpLabel": "View WP Booster source on GitHub",
+    "projectPortfolioLabel": "View Multilingual Portfolio source on GitHub",
+    "languageChanged": "Language changed to English",
+    "translationsUnavailable": "Translations are unavailable. English content is still accessible."
+  },
+  "fa": {
+    "skip": "رفتن به محتوای اصلی",
+    "navHome": "خانه",
+    "navAbout": "درباره من",
+    "navExpertise": "تخصص‌ها",
+    "navProjects": "پروژه‌ها",
+    "navContact": "تماس",
+    "eyebrow": "طراحی • توسعه • اتوماسیون",
+    "greeting": "سلام، من",
+    "heroName": "رضا اسماعیل گل",
+    "heroRole": "توسعه‌دهنده فول‌استک.",
+    "heroDescription": "ایده‌های پیچیده را به محصولات دیجیتال ساده، قابل‌اعتماد و کاربردی تبدیل می‌کنم؛ با طراحی سنجیده، معماری اصولی و تمرکز بر تأثیر واقعی.",
+    "exploreWork": "مشاهده نمونه‌کارها",
+    "letsTalk": "گفت‌وگو کنیم",
+    "findMe": "ارتباط با من",
+    "emailMe": "ایمیل به من ↗",
+    "codeFooter": "تبدیل ایده به نرم‌افزار کاربردی",
+    "scrollCue": "برای دیدن بیشتر اسکرول کنید",
+    "aboutKicker": "آشنایی با من",
+    "aboutHeading": "فناوری هدفمند، طراحی هوشمندانه.",
+    "aboutLead": "محصولاتی می‌سازم که طراحی خوب را با مهندسی اصولی پیوند می‌دهند.",
+    "aboutText": "از طراحی وب‌سایت‌های واکنش‌گرا تا توسعه نرم‌افزارهای فول‌استک، اتوماسیون فرایندها و تجربه‌های مبتنی بر هوش مصنوعی فعالیت می‌کنم. حل چالش‌های پیچیده و تبدیل آن‌ها به ابزارهای ساده و مفید برای کاربران، بخشی است که از آن لذت می‌برم.",
+    "aboutHighlightOne": "تجربه کاربری در اولویت",
+    "aboutHighlightTwo": "معماری قابل نگهداری",
+    "aboutHighlightThree": "توسعه با تمرکز بر عملکرد",
+    "statOne": "تجربه‌های تحت وب",
+    "statTwo": "مهندسی محصول",
+    "statThree": "اتوماسیون هوشمند",
+    "expertiseKicker": "حوزه‌های فعالیت",
+    "expertiseHeading": "توسعه از رابط کاربری تا زیرساخت.",
+    "expertiseIntro": "از طراحی اولیه تا استقرار نهایی، طراحی، فناوری و نیازهای کسب‌وکار را به یکدیگر متصل می‌کنم.",
+    "skillOneTitle": "فرانت‌اند و UI/UX",
+    "skillOneText": "طراحی رابط‌های کاربری واکنش‌گرا، دسترس‌پذیر و روان، با توجه دقیق به جزئیات بصری و تجربه استفاده.",
+    "skillTwoTitle": "بک‌اند و پلتفرم‌ها",
+    "skillTwoText": "پیاده‌سازی منطق نرم‌افزار، API، اتصال سرویس‌ها و ساخت سیستم‌هایی که توسعه و نگهداری آن‌ها ساده‌تر باشد.",
+    "skillThreeTitle": "هوش مصنوعی و اتوماسیون",
+    "skillThreeText": "طراحی فرایندهای هوشمند و قابلیت‌های مبتنی بر AI برای کاهش کارهای تکراری و افزایش بهره‌وری.",
+    "projectsKicker": "نمونه‌کارهای منتخب",
+    "projectsHeading": "پروژه‌هایی که از کار من می‌گویند.",
+    "projectsIntro": "گزیده‌ای از پروژه‌ها و آزمایش‌های متن‌باز من. کدهای آن‌ها را در گیت‌هاب بررسی کنید و روند توسعه‌شان را ببینید.",
+    "filterAll": "همه پروژه‌ها",
+    "filterWeb": "وب و اپلیکیشن",
+    "filterAI": "هوش مصنوعی و ابزارها",
+    "projectChatTitle": "استودیوی ویدیوی چت",
+    "projectChatText": "پروژه‌ای تحت وب برای تبدیل گفت‌وگوهای شبیه پیام‌رسان به محتوای ویدیویی.",
+    "projectGermanTitle": "تمرین آلمانی Menschen A1.1",
+    "projectGermanText": "ابزاری تعاملی برای تمرین واژگان و تمرین‌های مقدماتی زبان آلمانی.",
+    "projectSeoTitle": "سئو مایند",
+    "projectSeoText": "پروژه‌ای عمومی با پایتون برای بررسی ابزارها و گردش‌کارهای سئوی فنی و بهینه‌سازی جست‌وجو.",
+    "projectVoiceTitle": "لحن من",
+    "projectVoiceText": "پروژه‌ای عمومی مبتنی بر پایتون در زمینه صدا و ابزارهای دیجیتال.",
+    "projectWpTitle": "وردپرس بوستر",
+    "projectWpText": "پروژه‌ای متن‌باز برای بهبود عملکرد و سرعت وب‌سایت‌های وردپرسی.",
+    "projectPortfolioTitle": "پورتفولیوی چندزبانه",
+    "projectPortfolioText": "همین وب‌سایت؛ یک نمونه‌کار سبک با پشتیبانی چندزبانه، ناوبری دسترس‌پذیر و طراحی واکنش‌گرا.",
+    "viewSource": "مشاهده کد",
+    "moreGithub": "پروژه‌های بیشتر در گیت‌هاب",
+    "contactKicker": "در ارتباط باشیم",
+    "contactHeading": "ایده‌ای دارید؟ بیایید آن را بسازیم.",
+    "contactText": "چه ایده‌ای برای یک محصول داشته باشید، چه مسئله‌ای برای حل کردن یا فقط بخواهید گفت‌وگو کنیم، خوشحال می‌شوم از شما بشنوم.",
+    "contactButton": "شروع گفت‌وگو",
+    "preferEmail": "یا مستقیم ایمیل بزنید",
+    "footerLine": "طراحی با دقت، توسعه برای دنیای وب.",
+    "backTop": "بازگشت به بالا",
+    "switchLight": "تغییر به حالت روشن",
+    "switchDark": "تغییر به حالت تاریک",
+    "openMenu": "باز کردن منو",
+    "closeMenu": "بستن منو",
+    "navLabel": "منوی اصلی",
+    "languageLabel": "زبان وب‌سایت",
+    "filterLabel": "فیلتر پروژه‌ها",
+    "filterResult": "{count} پروژه نمایش داده می‌شود",
+    "metaTitle": "رضا اسماعیل گل | توسعه‌دهنده فول‌استک",
+    "metaDescription": "پورتفولیوی رضا اسماعیل گل؛ توسعه‌دهنده فول‌استک با تمرکز بر وب، هوش مصنوعی، اتوماسیون و تجربه کاربری. پروژه‌ها و نمونه‌کارهای منتخب.",
+    "brandLabel": "رضا اسماعیل گل — خانه",
+    "codeVisualLabel": "تصویر تزئینی محیط کدنویسی توسعه‌دهنده",
+    "projectChatLabel": "مشاهده کد استودیوی ویدیوی چت در گیت‌هاب",
+    "projectGermanLabel": "مشاهده کد تمرین آلمانی در گیت‌هاب",
+    "projectSeoLabel": "مشاهده کد سئو مایند در گیت‌هاب",
+    "projectVoiceLabel": "مشاهده کد لحن من در گیت‌هاب",
+    "projectWpLabel": "مشاهده کد وردپرس بوستر در گیت‌هاب",
+    "projectPortfolioLabel": "مشاهده کد پورتفولیوی چندزبانه در گیت‌هاب",
+    "languageChanged": "زبان به فارسی تغییر کرد",
+    "translationsUnavailable": "بارگیری ترجمه‌ها ممکن نیست. محتوای انگلیسی در دسترس است."
+  },
+  "de": {
+    "skip": "Zum Inhalt springen",
+    "navHome": "Start",
+    "navAbout": "Über mich",
+    "navExpertise": "Kompetenzen",
+    "navProjects": "Projekte",
+    "navContact": "Kontakt",
+    "eyebrow": "DESIGN • ENTWICKLUNG • AUTOMATISIERUNG",
+    "greeting": "Hallo, ich bin",
+    "heroName": "Reza Esmail Gol",
+    "heroRole": "Full-Stack-Entwickler.",
+    "heroDescription": "Ich verwandle komplexe Ideen in klare, zuverlässige digitale Produkte – mit durchdachtem Design, solider Technik und echtem Mehrwert.",
+    "exploreWork": "Projekte entdecken",
+    "letsTalk": "Kontakt aufnehmen",
+    "findMe": "FINDEN SIE MICH",
+    "emailMe": "E-Mail senden ↗",
+    "codeFooter": "Von der Idee zur funktionierenden Software",
+    "scrollCue": "MEHR ENTDECKEN",
+    "aboutKicker": "ÜBER MICH",
+    "aboutHeading": "Technologie mit Sinn. Design mit Anspruch.",
+    "aboutLead": "Ich entwickle Produkte, die gutes Design und solide Technik vereinen.",
+    "aboutText": "Meine Arbeit umfasst responsive Websites, Full-Stack-Anwendungen, Prozessautomatisierung und KI-gestützte Lösungen. Ich löse gerne komplexe Aufgaben und entwickle digitale Werkzeuge, die für Menschen einfach zu bedienen sind.",
+    "aboutHighlightOne": "Nutzerorientierte Oberflächen",
+    "aboutHighlightTwo": "Wartbare Architektur",
+    "aboutHighlightThree": "Leistungsorientierte Umsetzung",
+    "statOne": "Web-Erlebnisse",
+    "statTwo": "Produktentwicklung",
+    "statThree": "Intelligente Automatisierung",
+    "expertiseKicker": "MEINE LEISTUNGEN",
+    "expertiseHeading": "Entwicklung über den gesamten Stack.",
+    "expertiseIntro": "Vom ersten Entwurf bis zur Bereitstellung verbinde ich Design, Technologie und geschäftliche Anforderungen.",
+    "skillOneTitle": "Frontend & UI/UX",
+    "skillOneText": "Barrierearme, responsive Benutzeroberflächen mit intuitiver Bedienung, guter Typografie und Liebe zum Detail.",
+    "skillTwoTitle": "Backend & Plattformen",
+    "skillTwoText": "Anwendungslogik, APIs, Integrationen und wartbare Systeme, die gemeinsam mit einem Produkt wachsen.",
+    "skillThreeTitle": "KI & Automatisierung",
+    "skillThreeText": "Intelligente Workflows und KI-gestützte Funktionen, die Abläufe vereinfachen und produktiver machen.",
+    "projectsKicker": "AUSGEWÄHLTE ARBEITEN",
+    "projectsHeading": "Projekte, die für sich sprechen.",
+    "projectsIntro": "Eine Auswahl öffentlicher Repositories und Experimente. Entdecken Sie den Quellcode und die Entwicklung der Projekte.",
+    "filterAll": "Alle Projekte",
+    "filterWeb": "Web & Apps",
+    "filterAI": "KI & Tools",
+    "projectChatTitle": "Chat Video Studio",
+    "projectChatText": "Ein browserbasiertes Kreativprojekt, das Chat-Unterhaltungen in Videoinhalte umwandelt.",
+    "projectGermanTitle": "Menschen A1.1 Lernbegleiter",
+    "projectGermanText": "Ein interaktiver Begleiter zum Üben deutscher Vokabeln und grundlegender Aufgaben.",
+    "projectSeoTitle": "SEO Mind",
+    "projectSeoText": "Ein öffentliches Python-Projekt rund um technische SEO und Workflows für Suchmaschinenoptimierung.",
+    "projectVoiceTitle": "Lahne Man",
+    "projectVoiceText": "Ein öffentliches Python-Projekt im Bereich Sprache und digitale Werkzeuge.",
+    "projectWpTitle": "WP Booster",
+    "projectWpText": "Ein Open-Source-Projekt zur Verbesserung der Leistung und Geschwindigkeit von WordPress-Websites.",
+    "projectPortfolioTitle": "Mehrsprachiges Portfolio",
+    "projectPortfolioText": "Diese Website: ein schlankes Portfolio mit Sprachwechsel, zugänglicher Navigation und responsivem Design.",
+    "viewSource": "Quellcode",
+    "moreGithub": "Weitere Projekte auf GitHub",
+    "contactKicker": "KONTAKT",
+    "contactHeading": "Eine gute Idee? Lassen Sie uns daran arbeiten.",
+    "contactText": "Ob Sie eine Produktidee haben, ein Problem lösen möchten oder sich einfach austauschen wollen – ich freue mich auf Ihre Nachricht.",
+    "contactButton": "Gespräch beginnen",
+    "preferEmail": "ODER DIREKT PER E-MAIL",
+    "footerLine": "Mit Sorgfalt gestaltet. Für das Web entwickelt.",
+    "backTop": "Nach oben",
+    "switchLight": "Zum hellen Design wechseln",
+    "switchDark": "Zum dunklen Design wechseln",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
+    "navLabel": "Hauptnavigation",
+    "languageLabel": "Sprache der Website",
+    "filterLabel": "Projekte filtern",
+    "filterResult": "{count} Projekte angezeigt",
+    "metaTitle": "Reza Esmail Gol | Full-Stack-Entwickler",
+    "metaDescription": "Reza Esmail Gol – Full-Stack-Entwickler für Webanwendungen, Automatisierung, KI-Tools und benutzerfreundliche digitale Produkte.",
+    "brandLabel": "Reza Esmail Gol — Startseite",
+    "codeVisualLabel": "Dekorative Darstellung eines Code-Editors",
+    "projectChatLabel": "Quellcode von Chat Video Studio auf GitHub ansehen",
+    "projectGermanLabel": "Quellcode von Menschen A1.1 auf GitHub ansehen",
+    "projectSeoLabel": "Quellcode von SEO Mind auf GitHub ansehen",
+    "projectVoiceLabel": "Quellcode von Lahne Man auf GitHub ansehen",
+    "projectWpLabel": "Quellcode von WP Booster auf GitHub ansehen",
+    "projectPortfolioLabel": "Quellcode des mehrsprachigen Portfolios auf GitHub ansehen",
+    "languageChanged": "Sprache auf Deutsch umgestellt",
+    "translationsUnavailable": "Übersetzungen sind nicht verfügbar. Die englische Version bleibt lesbar."
+  }
+}

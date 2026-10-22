@@ -1,0 +1,15 @@
+{
+  "name": "reza-esmail-gol-portfolio",
+  "version": "2.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Accessible trilingual developer portfolio with browser QA",
+  "scripts": {
+    "test": "node --test tests/site.test.mjs",
+    "test:browser": "playwright test",
+    "check": "node --check script.js && node --test tests/site.test.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1"
+  }
+}

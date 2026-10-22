@@ -1,120 +1,120 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full Background & Navbar</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Flag Icon CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/4.1.5/css/flag-icons.min.css">
-<!-- Include Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#090e1a">
+<meta name="author" content="Reza Esmail Gol">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="color-scheme" content="dark light">
+<meta name="description" content="Reza Esmail Gol — Full-stack web developer building accessible, fast digital experiences, AI tools and useful software. Explore selected projects.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Reza Esmail Gol Portfolio">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Reza Esmail Gol | Full-Stack Developer">
+<meta property="og:description" content="Design, code and thoughtful digital products. Explore my work.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Reza Esmail Gol | Full-Stack Developer">
+<meta name="twitter:description" content="Design, code and thoughtful digital products. Explore my work.">
+<title>Reza Esmail Gol | Full-Stack Developer</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<script defer src="script.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Reza Esmail Gol","jobTitle":"Full-Stack Web Developer","sameAs":["https://github.com/RezaEsmailGol"],"email":"mailto:rezadigital@gmail.com"}</script>
 </head>
 <body>
-
-    <!-- Fixed Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">R</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home-section" id="home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about-section" id="about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact-section" id="contact">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#blog-section" id="blog">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#product-section" id="product">Product</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#team-section" id="team">Team</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#gallery-section" id="gallery">Gallery</a>
-                    </li>
-                </ul>
-                <!-- Language switch buttons with flags -->
-                <button id="toggleButton" class="flag-button">
-                    <span class="flag-icon flag-icon-us"></span>
-                </button>
-                <!-- Dark Mode Toggle -->
-                <button id="mode-toggle" class="btn btn-secondary">
-                    <i id="dark-mode-icon" class="fas fa-sun"></i>
-                </button>
-            </div>
-        </div>
+<a href="#main" class="skip-link" data-i18n="skip">Skip to content</a>
+<div class="glow glow-one" aria-hidden="true"></div><div class="glow glow-two" aria-hidden="true"></div>
+<header id="site-header" class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#home" aria-label="Reza Esmail Gol — Home" data-i18n-aria-label="brandLabel"><span class="brand-mark">R<span>.</span></span><span class="brand-word">REZA <strong>ESMAIL GOL</strong></span></a>
+    <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+      <a href="#home" data-i18n="navHome">Home</a><a href="#about" data-i18n="navAbout">About</a><a href="#expertise" data-i18n="navExpertise">Expertise</a><a href="#projects" data-i18n="navProjects">Projects</a><a href="#contact" data-i18n="navContact">Contact</a>
     </nav>
-    
-
-    <!-- Page Content -->
-    <div id="page-content-wrapper">
-        <div class="container-fluid text-white">
-            <!-- Home Section -->
-            <section id="home-section" class="content-section d-flex flex-column align-items-center justify-content-center text-center" style="min-height: 100vh;">
-                <img src="analiz.webp" alt="Demand Image" class="floating-image img-fluid" width="450" height="450">
-                <h1 id="title">Reza Esmailg Gol</h1>
-                <h2 id="subtitle">Full Stack Web Developer!</h2>
-                <p id="description"><code>Web Designer & Web Developer</code></p>
-            </section>
-
-            <!-- About Section -->
-            <section id="about-section" class="content-section d-flex flex-column align-items-center justify-content-center text-center" style="min-height: 100vh;">
-                <h1 id="about-title">About Me</h1>
-                <img src="data.png" alt="Demand Image" class="floating-image img-fluid" width="450" height="450">
-                <p id="about-content">I am a Full Stack Web Developer with a passion for coding and Python development...</p>
-            </section>
-
-            <!-- Contact Section -->
-            <section id="contact-section" class="content-section d-flex flex-column align-items-center justify-content-center text-center" style="min-height: 100vh;">
-                <h1 id="contact-title">Contact</h1>
-                <img src="dapa.png" alt="Demand Image" class="floating-image img-fluid" width="450" height="450">
-                <p id="contact-email">Email: rezadigital@gmail.com</p>
-                <p id="contact-phone">Phone: +989192513015</p>
-            </section>
-
-            <!-- Blog Section -->
-            <section id="blog-section" class="content-section d-flex flex-column align-items-center justify-content-center text-center" style="min-height: 100vh;">
-                <h1 id="blog-title">Blog</h1>
-                <img src="reza.png" alt="Demand Image" class="floating-image img-fluid" width="450" height="450">
-                <p id="blog-content">Welcome to my blog! Here I share my thoughts on technology, data science, Python...</p>
-            </section>
-
-            <!-- Product Section -->
-            <section id="product-section" class="content-section d-flex flex-column align-items-center justify-content-center text-center" style="min-height: 100vh;">
-                <h1 id="product-title">Product</h1>
-                <img src="mona.png" alt="Demand Image" class="floating-image img-fluid" width="450" height="450">
-                <p id="product-content">Explore the latest projects and products I've been working on...</p>
-            </section>
-
-            <!-- Team Section -->
-            <section id="team-section" class="content-section d-flex flex-column align-items-center justify-content-center text-center" style="min-height: 100vh;">
-                <h1 id="team-title">Team</h1>
-                <img src="open.png" alt="Demand Image" class="floating-image img-fluid" width="450" height="450">
-                <p id="team-content">Meet the amazing people I work with...</p>
-            </section>
-
-            <!-- Gallery Section -->
-            <section id="gallery-section" class="content-section d-flex flex-column align-items-center justify-content-center text-center" style="min-height: 100vh;">
-                <h1 id="gallery-title">Gallery</h1>
-                <img src="power.png" alt="Demand Image" class="floating-image img-fluid" width="450" height="450">
-                <p id="gallery-content">Here are some images of my recent work and collaborations...</p>
-            </section>
-        </div>
+    <div class="header-actions">
+      <div class="language-switch" role="group" aria-label="Language">
+        <button type="button" data-lang="en" class="active" aria-pressed="true" lang="en">EN</button><button type="button" data-lang="fa" aria-pressed="false" lang="fa">FA</button><button type="button" data-lang="de" aria-pressed="false" lang="de">DE</button>
+      </div>
+      <button type="button" class="icon-button theme-toggle" id="theme-toggle" aria-label="Switch theme" title="Switch theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg></button>
+      <button type="button" class="icon-button menu-toggle" id="menu-toggle" aria-controls="main-nav" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
-
-    <script src="script.js"></script>
+  </div>
+</header>
+<main id="main">
+<section id="home" class="section hero" aria-labelledby="hero-title">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="status-dot"></span><span data-i18n="eyebrow">DESIGN • DEVELOPMENT • AUTOMATION</span></p>
+      <p class="greeting" data-i18n="greeting">Hello, I'm</p>
+      <h1 id="hero-title"><span data-i18n="heroName">Reza Esmail Gol</span><span class="gradient-text" data-i18n="heroRole">Full-Stack Developer.</span></h1>
+      <p class="hero-description" data-i18n="heroDescription">I turn complex ideas into clear, reliable digital products — with thoughtful interfaces, robust engineering and a focus on real-world impact.</p>
+      <div class="hero-actions"><a class="button button-primary" href="#projects"><span data-i18n="exploreWork">Explore my work</span><span aria-hidden="true">↗</span></a><a class="button button-outline" href="#contact"><span data-i18n="letsTalk">Let's talk</span><span aria-hidden="true">→</span></a></div>
+      <div class="hero-social"><span data-i18n="findMe">FIND ME ON</span><a href="https://github.com/RezaEsmailGol" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="mailto:rezadigital@gmail.com" data-i18n="emailMe">Email me ↗</a></div>
+    </div>
+    <div class="hero-visual" role="img" aria-label="Stylized developer interface" data-i18n-aria-label="codeVisualLabel">
+      <div class="orb orb-one"></div><div class="orb orb-two"></div><div class="visual-grid"></div>
+      <div class="code-card" dir="ltr">
+        <div class="code-topbar"><span class="window-dots"><i></i><i></i><i></i></span><span>developer.ts</span><span>{ }</span></div>
+        <div class="code-lines" aria-hidden="true">
+          <div><em>01</em><b>const</b> developer = {</div>
+          <div><em>02</em>&nbsp; name: <strong>'Reza'</strong>,</div>
+          <div><em>03</em>&nbsp; role: <strong>'Full Stack'</strong>,</div>
+          <div><em>04</em>&nbsp; focus: [</div>
+          <div><em>05</em>&nbsp; &nbsp; <strong>'Web Apps'</strong>,</div>
+          <div><em>06</em>&nbsp; &nbsp; <strong>'AI & Automation'</strong></div>
+          <div><em>07</em>&nbsp; ],</div>
+          <div><em>08</em>&nbsp; mindset: <strong>'Build better'</strong></div>
+          <div><em>09</em>};</div>
+          <div><em>10</em><b>export default</b> developer<span class="cursor">_</span></div>
+        </div>
+        <div class="code-bottom"><span>●</span><span data-i18n="codeFooter">Ideas into working software</span><span>LIVE</span></div>
+      </div>
+      <div class="floating-chip chip-top">✦ &nbsp; UI / UX</div><div class="floating-chip chip-bottom">⌘ &nbsp; FULL STACK</div>
+    </div>
+  </div>
+  <div class="container scroll-cue"><span></span><span data-i18n="scrollCue">SCROLL TO EXPLORE</span></div>
+</section>
+<section id="about" class="section section-divider" aria-labelledby="about-heading">
+ <div class="container about-grid">
+  <div><p class="kicker"><span>01 /</span> <span data-i18n="aboutKicker">INTRODUCTION</span></p><h2 class="section-title" id="about-heading" data-i18n="aboutHeading">Technology with purpose. Design with intention.</h2></div>
+  <div class="about-copy"><p class="lead" data-i18n="aboutLead">I build products where clean design meets solid engineering.</p><p class="body-copy" data-i18n="aboutText">My work spans responsive websites, full-stack applications, process automation and AI-assisted experiences. I enjoy untangling difficult challenges and making digital tools feel simple for the people using them.</p>
+   <div class="about-points"><p><span>↗</span> <span data-i18n="aboutHighlightOne">User-first interfaces</span></p><p><span>◎</span> <span data-i18n="aboutHighlightTwo">Maintainable architecture</span></p><p><span>✳</span> <span data-i18n="aboutHighlightThree">Performance-minded delivery</span></p></div>
+  </div>
+ </div>
+ <div class="container stats-row"><div><strong>01 <span>/ 03</span></strong><p data-i18n="statOne">Web experiences</p></div><div><strong>02 <span>/ 03</span></strong><p data-i18n="statTwo">Product engineering</p></div><div><strong>03 <span>/ 03</span></strong><p data-i18n="statThree">Smart automation</p></div></div>
+</section>
+<section id="expertise" class="section section-divider" aria-labelledby="expertise-heading">
+ <div class="container">
+  <p class="kicker"><span>02 /</span> <span data-i18n="expertiseKicker">WHAT I DO</span></p><div class="section-heading-row"><h2 class="section-title" id="expertise-heading" data-i18n="expertiseHeading">Building across the entire stack.</h2><p class="section-intro" data-i18n="expertiseIntro">From the first wireframe to deployment, I connect the dots between design, technology and business needs.</p></div>
+  <div class="expertise-grid">
+   <article class="expertise-card"><div class="expertise-icon">⌘</div><span class="expertise-index">/ 01</span><h3 data-i18n="skillOneTitle">Frontend & UI/UX</h3><p data-i18n="skillOneText">Accessible, responsive interfaces with intuitive flows, careful typography and polished details.</p><div class="skill-tags"><span>HTML / CSS</span><span>JavaScript</span><span>React</span><span>Responsive UI</span></div></article>
+   <article class="expertise-card"><div class="expertise-icon">{ }</div><span class="expertise-index">/ 02</span><h3 data-i18n="skillTwoTitle">Backend & Platforms</h3><p data-i18n="skillTwoText">Practical application logic, APIs, integrations and maintainable systems that scale with a product.</p><div class="skill-tags"><span>Python</span><span>PHP</span><span>Laravel</span><span>Odoo</span></div></article>
+   <article class="expertise-card"><div class="expertise-icon">✳</div><span class="expertise-index">/ 03</span><h3 data-i18n="skillThreeTitle">AI & Automation</h3><p data-i18n="skillThreeText">Smarter workflows and AI-powered features that reduce friction and help people get more done.</p><div class="skill-tags"><span>AI Tools</span><span>APIs</span><span>Automation</span><span>WordPress</span></div></article>
+  </div>
+ </div>
+</section>
+<section id="projects" class="section section-divider" aria-labelledby="projects-heading">
+ <div class="container">
+  <p class="kicker"><span>03 /</span> <span data-i18n="projectsKicker">SELECTED WORK</span></p><div class="section-heading-row"><h2 class="section-title" id="projects-heading" data-i18n="projectsHeading">Work that speaks for itself.</h2><p class="section-intro" data-i18n="projectsIntro">A selection of public repositories and experiments. Explore the source code and follow the evolution of each project.</p></div>
+  <div class="filters" role="group" aria-label="Filter projects"><button type="button" class="active" aria-pressed="true" data-filter="all" data-i18n="filterAll">All projects</button><button type="button" aria-pressed="false" data-filter="web" data-i18n="filterWeb">Web & apps</button><button type="button" aria-pressed="false" data-filter="ai" data-i18n="filterAI">AI & tools</button></div>
+  <div class="projects-grid" id="projects-grid">
+   <article class="project-card" data-category="web"><div class="project-art art-chat" aria-hidden="true"><div class="art-window"><div class="art-dots">● ● ●</div><div class="art-bubble"></div><div class="art-bubble second"></div><div class="art-bubble third"></div><div class="art-bars">▮ ▮ ▮ ▮ ▮ ▮ ▮</div></div><span class="art-number">01</span></div><div class="project-info"><div class="project-meta"><span>HTML / VIDEO</span><span>2026</span></div><h3 data-i18n="projectChatTitle">Chat Video Studio</h3><p data-i18n="projectChatText">A browser-based creative project for turning chat-style conversations into video content.</p><div class="project-bottom"><span>Creator Tools · Web</span><a href="https://github.com/RezaEsmailGol/chat-video-studio" target="_blank" rel="noopener noreferrer" aria-label="Chat Video Studio on GitHub" data-i18n-aria-label="projectChatLabel"><span data-i18n="viewSource">View source</span> ↗</a></div></div></article>
+   <article class="project-card" data-category="web"><div class="project-art art-german" aria-hidden="true"><div class="art-language"><span>DE</span><strong>Hallo!</strong><small>A1.1 · lernen</small><div class="art-progress"><i></i></div></div><span class="art-number">02</span></div><div class="project-info"><div class="project-meta"><span>JAVASCRIPT / EDUCATION</span><span>2026</span></div><h3 data-i18n="projectGermanTitle">Menschen A1.1 Companion</h3><p data-i18n="projectGermanText">An interactive companion for practicing German vocabulary and beginner-level exercises.</p><div class="project-bottom"><span>Learning · Web App</span><a href="https://github.com/RezaEsmailGol/Menschen.A1.1" target="_blank" rel="noopener noreferrer" aria-label="Menschen A1.1 on GitHub" data-i18n-aria-label="projectGermanLabel"><span data-i18n="viewSource">View source</span> ↗</a></div></div></article>
+   <article class="project-card" data-category="ai"><div class="project-art art-seo" aria-hidden="true"><div class="art-chart"><small>SEARCH INTELLIGENCE</small><div class="art-chart-bars"><i></i><i></i><i></i><i></i><i></i><i></i></div><strong>SEO ↗</strong></div><span class="art-number">03</span></div><div class="project-info"><div class="project-meta"><span>PYTHON / SEO</span><span>2026</span></div><h3 data-i18n="projectSeoTitle">SEO Mind</h3><p data-i18n="projectSeoText">A public Python project exploring technical SEO and search optimization workflows.</p><div class="project-bottom"><span>Python · Tooling</span><a href="https://github.com/RezaEsmailGol/seomind" target="_blank" rel="noopener noreferrer" aria-label="SEO Mind on GitHub" data-i18n-aria-label="projectSeoLabel"><span data-i18n="viewSource">View source</span> ↗</a></div></div></article>
+   <article class="project-card" data-category="ai"><div class="project-art art-voice" aria-hidden="true"><div class="art-voice-panel"><small>LAHNE MAN</small><div class="art-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><strong>PYTHON / TOOLS</strong></div><span class="art-number">04</span></div><div class="project-info"><div class="project-meta"><span>PYTHON / OPEN SOURCE</span><span>2026</span></div><h3 data-i18n="projectVoiceTitle">Lahne Man</h3><p data-i18n="projectVoiceText">A Python-based public project in the area of voice and digital tooling.</p><div class="project-bottom"><span>Python · Experiment</span><a href="https://github.com/RezaEsmailGol/lahne-man" target="_blank" rel="noopener noreferrer" aria-label="Lahne Man on GitHub" data-i18n-aria-label="projectVoiceLabel"><span data-i18n="viewSource">View source</span> ↗</a></div></div></article>
+   <article class="project-card" data-category="web"><div class="project-art art-wp" aria-hidden="true"><div class="art-wp-letter">W<span>↗</span></div><div class="art-speed">PERFORMANCE <span>▁ ▃ ▆ █</span></div><span class="art-number">05</span></div><div class="project-info"><div class="project-meta"><span>WORDPRESS / PERFORMANCE</span><span>2026</span></div><h3 data-i18n="projectWpTitle">WP Booster</h3><p data-i18n="projectWpText">An open-source WordPress performance project focused on improving web speed.</p><div class="project-bottom"><span>WordPress · Speed</span><a href="https://github.com/RezaEsmailGol/wp-booster" target="_blank" rel="noopener noreferrer" aria-label="WP Booster on GitHub" data-i18n-aria-label="projectWpLabel"><span data-i18n="viewSource">View source</span> ↗</a></div></div></article>
+   <article class="project-card" data-category="web"><div class="project-art art-portfolio" aria-hidden="true"><div class="art-portfolio-panel"><span>R.</span><strong>PORTFOLIO</strong><small>EN · FA · DE</small></div><span class="art-number">06</span></div><div class="project-info"><div class="project-meta"><span>HTML / CSS / JS</span><span>2026</span></div><h3 data-i18n="projectPortfolioTitle">Multilingual Portfolio</h3><p data-i18n="projectPortfolioText">This site: a lightweight portfolio with multilingual support, accessible navigation and responsive design.</p><div class="project-bottom"><span>Design · Open Source</span><a href="https://github.com/RezaEsmailGol/Portfolio-website-multi-langual" target="_blank" rel="noopener noreferrer" aria-label="Portfolio repository on GitHub" data-i18n-aria-label="projectPortfolioLabel"><span data-i18n="viewSource">View source</span> ↗</a></div></div></article>
+  </div>
+  <div class="more-projects"><a href="https://github.com/RezaEsmailGol?tab=repositories" target="_blank" rel="noopener noreferrer"><span data-i18n="moreGithub">Explore more on GitHub</span> ↗</a></div>
+ </div>
+</section>
+<section id="contact" class="section contact-section" aria-labelledby="contact-heading">
+ <div class="container contact-panel"><p class="kicker"><span>04 /</span> <span data-i18n="contactKicker">LET'S CONNECT</span></p><h2 id="contact-heading" data-i18n="contactHeading">Have a great idea? Let's build it.</h2><p data-i18n="contactText">Whether you have a product in mind, a problem to solve or simply want to connect — I'd love to hear from you.</p><a class="button button-primary" href="mailto:rezadigital@gmail.com?subject=Let%27s%20collaborate"><span data-i18n="contactButton">Start a conversation</span> ↗</a><div class="direct-email"><span data-i18n="preferEmail">OR EMAIL ME DIRECTLY</span><a href="mailto:rezadigital@gmail.com" dir="ltr">rezadigital@gmail.com</a></div></div>
+</section>
+</main>
+<footer class="site-footer"><div class="container footer-inner"><a href="#home" class="footer-brand">R<span>.</span> <strong>REZA ESMAIL GOL</strong></a><p>© <span id="year">2026</span> Reza Esmail Gol. <span data-i18n="footerLine">Designed with care. Built for the web.</span></p><a href="#home"><span data-i18n="backTop">Back to top</span> ↑</a></div></footer>
+<div class="sr-only" role="status" aria-live="polite" id="status-message"></div>
 </body>
 </html>
